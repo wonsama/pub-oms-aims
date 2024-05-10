@@ -84,7 +84,7 @@ function updateValue(t) {
   }
   s.updateStatus = t['STATUS'];
   s.lastResponseTime =
-    '20' + t['LATEST RESPONSE TIME'].replace(' ', 'T') + '.000+0900';
+    '20' + t['LATEST RESPONSE TIME'].replace(' ', 'T') + ':00.000+0900';
 
   return s;
 }

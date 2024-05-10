@@ -92,9 +92,16 @@ function updateValue(t) {
 // Print the data
 const json = data.map((d) => updateValue(d));
 
+const result = {
+  responseMessage: 'The request has been completed',
+  responseCode: '200',
+  customBatchId: null,
+  labelList: json,
+};
+
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  res.send(json);
+  res.send(result);
 });
 
 module.exports = router;

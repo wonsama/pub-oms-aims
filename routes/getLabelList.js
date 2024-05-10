@@ -72,6 +72,7 @@ function updateValue(t) {
   s.gateway.name = t['LINKED GATEWAY'];
   s.battery = t['BATTERY'];
   s.signal = t['SIGNAL STRENGTH'];
+  s.type = t['TYPE'];
   if (t['TEMPLATE']) {
     s.templateType[0] = t['TEMPLATE'];
   } else {

@@ -91,11 +91,10 @@ function updateValue(t) {
     s.lastResponseTime = '0000-00-00T00:00:00.000+0900';
   }
 
-  if (
-    t['PRODUCT DESCRIPTION'] &&
-    t['PRODUCT DESCRIPTION'].indexOf('오쏘몰') >= 0
-  ) {
-    console.log(s);
+  if (s.templateType.length > 0) {
+    s.templateManual = true;
+  } else {
+    s.templateManual = false;
   }
 
   return s;

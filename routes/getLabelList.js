@@ -84,8 +84,19 @@ function updateValue(t) {
     s.networkStatus = false;
   }
   s.updateStatus = t['STATUS'];
-  s.lastResponseTime =
-    '20' + t['LATEST RESPONSE TIME'].replace(' ', 'T') + ':00.000+0900';
+  if (t['LATEST RESPONSE TIME']) {
+    s.lastResponseTime =
+      '20' + t['LATEST RESPONSE TIME'].replace(' ', 'T') + ':00.000+0900';
+  } else {
+    s.lastResponseTime = '0000-00-00T00:00:00.000+0900';
+  }
+
+  if (
+    t['PRODUCT DESCRIPTION'] &&
+    t['PRODUCT DESCRIPTION'].indexOf('오쏘몰') >= 0
+  ) {
+    console.log(s);
+  }
 
   return s;
 }
